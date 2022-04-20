@@ -5,21 +5,21 @@ class BDD
 
     private static $_instance;
 
-    public static function getInstance($datasource)
+    public static function getInstance()
     {
         if(empty(self::$_instance))
         {
-            self::$_instance = new BDD($datasource);
+            self::$_instance = new BDD();
         }
         return self::$_instance->_bdd;
     }
 
-    public function __construct($datasource)
+    public function __construct()
     {
-        $dbname = $$datasource->dbname;
-        $host = $$datasource->host;
-        $user = $$datasource->user;
-        $password = $$datasource->password;
+        $dbname = 'flositeweb';
+        $host = 'localhost';
+        $user = 'root';
+        $password = '';
 
         $dsn = 'mysql:dbname='. $dbname .';host=' . $host;
         $this->_bdd = new PDO($dsn,$user,$password);

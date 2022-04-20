@@ -23,24 +23,23 @@ class MyAutoload
     }
     public static function autoload($class)
     {
-        echo $class;
         if(file_exists(MODEL.$class.'.php'))
         {
-            echo $class . "exist Model";
+            echo $class . "exist Model/";
             include_once(MODEL.$class.'.php');
         }
-        if(file_exists(CLASSES.$class.'.php'))
+        elseif(file_exists(CLASSES.$class.'.php'))
         {
-            echo $class . "exist Class";
+            echo $class . "exist Class/";
             include_once(CLASSES.$class.'.php');
         }
-        if(file_exists(CONTROLLER.$class.'.php'))
+        elseif(file_exists(CONTROLLER.$class.'.php'))
         {
-            echo $class . "exist Controller";
+            echo $class . "exist Controller/";
             include_once(CONTROLLER.$class.'.php');
         }
         else
-        echo $class . "not exist";
+        echo $class . "not exist/";
     }
 }
 ?>

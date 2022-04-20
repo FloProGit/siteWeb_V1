@@ -7,11 +7,11 @@ class BaseManager
     private $_object;
     private $_bdd;
 
-    public function __construct($table,$object,$datasource)
+    public function __construct($table,$object)
     {
         $this->_table = $table;    
         $this->_object = $object;
-        $this->_bdd = BDD::getInstance($datasource);
+        $this->_bdd = BDD::getInstance();
     }
 
     public function getById($id)

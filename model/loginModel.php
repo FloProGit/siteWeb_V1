@@ -4,9 +4,10 @@
 class loginModel extends BaseManager
 {
 
-    public function __construct($datasource)
+    public function __construct()
     {
-        parent::__construct("user","User",$datasource);
+        echo'login construct';
+        parent::__construct("user","User");
     }
 
     public function checkUser($user,$mail)
