@@ -5,13 +5,15 @@ class BaseManager
 
     private $_table;
     private $_object;
-    private $_bdd;
+    protected $_bdd;
 
     public function __construct($table,$object)
     {
         $this->_table = $table;    
         $this->_object = $object;
         $this->_bdd = BDD::getInstance();
+
+       
     }
 
     public function getById($id)

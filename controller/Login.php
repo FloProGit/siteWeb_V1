@@ -20,28 +20,27 @@ class Login
                 'usernameError'=>'dqmlkdjqszpmdjqskmd',
             ];
             $myView = new View(self::LOGIN_VIEW_NAME);
-            $this->ModeLogin = new loginModel();
-            if(isset( $this->ModeLogin ))
-            {
-                echo 'create';
-            }
-            else
-            {
-                echo ' NOT create';
-
-            }
+           
             return $myView->render(['data' => $data]);
         }
-        
-        if(isset($this->ModeLogin))
-        {
-            echo 'create';
-        }
-        else
-        {
-            echo ' NOT create';
+        $username= $_POST['username'];
+        $password= $_POST['password'];
+        $this->ModeLogin = new loginModel($username,$password);
+        $datafetch = $this->ModeLogin->validateUser();
 
+        if($datafetch === 'NO USER FOUND')
+        {
+            echo 'NO USER FOUND';
         }
+        else if($datafetch === true)
+        {
+            echo "VALIDATE";
+        }
+        else if($datafetch === false)
+        {
+            echo "wrong Password"; 
+        }
+      
     }
     
      

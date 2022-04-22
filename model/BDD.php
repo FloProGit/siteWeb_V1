@@ -22,7 +22,10 @@ class BDD
         $password = '';
 
         $dsn = 'mysql:dbname='. $dbname .';host=' . $host;
-        $this->_bdd = new PDO($dsn,$user,$password);
+        
+            $this->_bdd = new PDO($dsn,$user,$password);
+        
+      
     }
 
 
