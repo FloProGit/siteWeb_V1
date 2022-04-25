@@ -9,10 +9,10 @@ class Login
 {
 
     private const METHOD_GET = 'GET';
-    private const LOGIN_VIEW_NAME = 'login';
+    private const LOGIN_VIEW_NAME = 'login_view';
     private $ModeLogin;
 
-    public function login()
+    public function loginIn()
     {
         if($_SERVER['REQUEST_METHOD'] === self::METHOD_GET)
         {

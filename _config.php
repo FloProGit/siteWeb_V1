@@ -35,8 +35,9 @@ class MyAutoload
         }
         elseif(file_exists(CONTROLLER.$class.'.php'))
         {
-            echo $class . "exist Controller/";
+            echo $class . " Controller exist/";
             include_once(CONTROLLER.$class.'.php');
+          
         }
         else
         echo $class . "not exist/";

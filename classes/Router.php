@@ -15,20 +15,20 @@ class Router
 
         'a_propos'=>['controller' => 'home', 'method'=>'showA_Propos'],
 
-        'login'=>['controller' => 'login', 'method'=>'login'],
+        'login'=>['controller' => 'login', 'method'=>'loginIn'],
 
         ];
 
     public function __construct($request)
     {
         $this->request = $request;    
+
     }
 
 
     public function renderController()
     {
         $request = $this->request;
-
         if(key_exists($request, $this->routes))
         {
             $controller = $this->routes[$request]['controller'];

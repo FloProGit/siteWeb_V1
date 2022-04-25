@@ -3,7 +3,7 @@
 <div class="moi">
         <div class="text">
             <h1>Je code donc je suis</h1>
-            <p>
+            <!-- <p>
                 Avec un parcours atypique j’ai voyagé de connaissance en connaissance ,toujours curieux de comprendre comment fonctionne les chose que je croise.
                 Quand je regarde un écrans je ne voie pas un rectangle composé de fenêtre je vois souvent cette amas de pixel organisé comme une chorégraphie exécuté a la perfection, puis je me focalise sur 1 de ces pixel qui n’est que en fait du courant mais j’imagine la manière donc il née d’une simple impulsion .
             </p>
@@ -25,7 +25,7 @@ Et cela n’est pas anodin car traversant a l’ouverture il doivent courir le l
                 Mais l’histoire continue son arrivons sur l’achèvement de cette instant ou les calculateur font leur travail compté en puissance de 2 pour au final dire que le sas ou ce trouvé ‘’ et en faite 3 valeur   251 rouge , 208 vert et 151 bleu et notre petit calculateur va donné c’est information a notre ingénieur qui va pour sont petit pixel mettre un certaine intensité dans chaque couleur et nous obtenons une couleur pour le pixel a la position 1920-1080.
 Voila qui fait la lumiére sur la réalisation d’un instant.  
 
-            </p>
+            </p> -->
         </div>
         <div class="canvas">
 
