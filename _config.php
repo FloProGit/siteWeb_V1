@@ -16,7 +16,7 @@ class MyAutoload
         define('VIEW',ROOT .'view/');
         define('MODEL',ROOT .'model/');
         
-        define('ASSETS',HOST.'assets/');
+        define('CSS',HOST.'source/CSS/');
         
         define('CLASSES',ROOT.'classes/');
        // echo '<pre>';print_r($_SERVER);
@@ -25,17 +25,14 @@ class MyAutoload
     {
         if(file_exists(MODEL.$class.'.php'))
         {
-            echo $class . "exist Model/";
             include_once(MODEL.$class.'.php');
         }
         elseif(file_exists(CLASSES.$class.'.php'))
         {
-            echo $class . "exist Class/";
             include_once(CLASSES.$class.'.php');
         }
         elseif(file_exists(CONTROLLER.$class.'.php'))
         {
-            echo $class . " Controller exist/";
             include_once(CONTROLLER.$class.'.php');
           
         }
