@@ -22,6 +22,11 @@ class Home
         $myView = new View('a_propos');
         $myView->render();
     }
-
+    public function showCheck()
+    {
+        //echo "tata";
+        $myView = new View('CheckVar');
+        $myView->render();
+    }
   
 }

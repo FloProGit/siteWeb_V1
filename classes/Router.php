@@ -17,6 +17,12 @@ class Router
 
         'login'=>['controller' => 'login', 'method'=>'loginIn'],
 
+        // -----use only for check some  variable -----
+        'check'=>['controller' => 'home', 'method'=>'showCheck'],
+        //------------------------------
+
+
+
         ];
 
     public function __construct($request)
@@ -32,7 +38,7 @@ class Router
         if(key_exists($request, $this->routes))
         {
             $controller = $this->routes[$request]['controller'];
-            
+          
             $method = $this->routes[$request]['method'];
             
             $currentController = new $controller();

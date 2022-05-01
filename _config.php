@@ -7,10 +7,10 @@ class MyAutoload
     {
         spl_autoload_register(array(__CLASS__,'autoload'));
 
-
+        
         $root =$_SERVER['DOCUMENT_ROOT'];
         $host =$_SERVER['HTTP_HOST'];
-        define('HOST','http://' . $host.'/');
+        define('HOST',$_SERVER['REQUEST_SCHEME'].'://' . $host.'/');
         define('ROOT',$root.'/');
         define('CONTROLLER',ROOT . 'controller/');
         define('VIEW',ROOT .'view/');
