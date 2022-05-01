@@ -35,6 +35,7 @@ class Router
     public function renderController()
     {
         $request = $this->request;
+        echo $request;
         if(key_exists($request, $this->routes))
         {
             $controller = $this->routes[$request]['controller'];
