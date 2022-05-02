@@ -7,7 +7,7 @@ class MyAutoload
     {
         spl_autoload_register(array(__CLASS__,'autoload'));
 
-        
+        echo 'DEFINE ACTIVATED';
         $root =$_SERVER['DOCUMENT_ROOT'];
         $host =$_SERVER['HTTP_HOST'];
         define('HOST',$_SERVER['REQUEST_SCHEME'].'://' . $host.'/');

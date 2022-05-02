@@ -12,7 +12,7 @@ class Login
     private const LOGIN_VIEW_NAME = 'login_view';
     private $ModeLogin;
 
-    public function loginIn()
+    public function loginIn(): View 
     {
         if($_SERVER['REQUEST_METHOD'] === self::METHOD_GET)
         {
@@ -40,7 +40,7 @@ class Login
         {
             echo "wrong Password"; 
         }
-      
+      return new View(self::LOGIN_VIEW_NAME);
     }
     
      
