@@ -29,7 +29,7 @@ class BDD
         catch(PDOException $pe)
         {
             $errorMsg = $pe->getMessage();
-
+            echo $errorMsg;
             if(str_contains($errorMsg,'Unknown database'))
             {
                 echo "this is Bad Connection";
