@@ -4,11 +4,12 @@
 <p class="Check">
 <?PHP
 
-foreach($_SERVER as $key_name => $key_value) {
+phpinfo();
+// foreach($_SERVER as $key_name => $key_value) {
 
-print $key_name . " = " . $key_value . "<br>";
+// print $key_name . " = " . $key_value . "<br>";
 
-}
+// }
 
 ?>
 </p>
