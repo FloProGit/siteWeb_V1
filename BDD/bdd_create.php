@@ -10,8 +10,8 @@ $username = $_GET['user'];
 $password = $_GET['password'];
 
 
-$currentBddCreation = new BDDCreate($servername,$username,$password);
-// $currentBddCreation = new BDDCreate('localhost','root','');
+//$currentBddCreation = new BDDCreate($servername,$username,$password);
+ $currentBddCreation = new BDDCreate('localhost','root','');
 
 
 
