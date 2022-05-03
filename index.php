@@ -2,7 +2,7 @@
 
 
 include_once('_config.php');
-include_once('../htdocs/DotENV.php');
+include_once('DotENV.php');
 
 
 MyAutoload::start();
