@@ -16,14 +16,15 @@ class BDD
 
     public function __construct()
     {
-        $dbname = 'flositeweb';
-        $host = 'localhost';
+        $dbname = 'test';
+        echo $_ENV['DATABASE_DNS'];
+        $host = $_ENV['DATABASE_DNS'];
         $user = 'root';
         $password = '';
         try
         {
 
-        $dsn = 'mysql:dbname='. $dbname .';host=' . $host;
+            $dsn = $host;
             $this->_bdd = new PDO($dsn,$user,$password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
         }
         catch(PDOException $pe)
