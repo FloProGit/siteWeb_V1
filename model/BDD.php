@@ -19,8 +19,8 @@ class BDD
         $dbname = 'test';
         echo $_ENV['DATABASE_DNS'];
         $host = $_ENV['DATABASE_DNS'];
-        $user = 'root';
-        $password = '';
+        $user = $_ENV['DATABASE_USER'];
+        $password = $_ENV['DATABASE_PASSWORD'];
         try
         {
 
