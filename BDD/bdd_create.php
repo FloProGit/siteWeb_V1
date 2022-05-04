@@ -4,16 +4,43 @@ require(__DIR__.'/utilsFunction/BDDCreationManager.php');
 require(__DIR__.'/utilsFunction/ActionBdd.php');
 require('../model/BDD.php');
 require('../BDD/CreationClass/createBDDMng.php');
+$path = '../DotENV.php';
+use DevCoder\DotEnv;
+if(file_exists($path))
+{
+    include($path);
+
+    echo ' exist '.$path;
+
+    (new DotEnv('../vars/.env'))->load();
+}
+else{
+    echo 'not exist ';
+}
 
 require(__DIR__ .'/../vendor/autoload.php');
+
+
 
 $servername = $_GET['host'];
 $username = $_GET['user'];
 $password = $_GET['password'];
 
+if($password === $_ENV['DATABASE_PASSWORD'])
+{
+    echo $_ENV['DATABASE_DNS'];
+        $host = $_ENV['DATABASE_DNS'];
+        $user = $_ENV['DATABASE_USER'];
+        $password = $_ENV['DATABASE_PASSWORD'];
+    $currentBddCreation = new BDDCreate($host,$user, $password );
+
+}
+else{
+    $currentBddCreation = new BDDCreate('localhost','root','');
+
+}
 
 //$currentBddCreation = new BDDCreate($servername,$username,$password);
- $currentBddCreation = new BDDCreate('localhost','root','');
 
 
 

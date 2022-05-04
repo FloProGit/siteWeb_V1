@@ -1,5 +1,4 @@
 <?php
-
 class BDDCreate{
 
 
@@ -9,15 +8,15 @@ class BDDCreate{
 
     public function __construct($servername,$username,$password)
     {
+        
         $this->servername = $servername;
         $this->username = $username;
         $this->password = $password;
 
         echo 'JE SUIS ICI ';
-       // $conn = new PDO("mysql:host=$servername", $username, $password);
+        $conn = new PDO($servername, $username, $password);
         // set the PDO error mode to exception
-       // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-       $conn = null;
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $path = './StructureBdd/CreateTable.yaml';
       
         if(file_exists( $path ))
