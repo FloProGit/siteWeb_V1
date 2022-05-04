@@ -11,8 +11,11 @@ if(file_exists($path))
     include($path);
 
     echo ' exist '.$path;
-
-    (new DotEnv('../vars/.env'))->load();
+    if(file_exists('../vars/.env'))
+    {
+        echo ' .ENV exist '.'../vars/.env';
+        (new DotEnv('../vars/.env'))->load();
+    }
 }
 else{
     echo 'not exist ';
