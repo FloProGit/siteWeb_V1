@@ -4,13 +4,12 @@ require(__DIR__.'/utilsFunction/BDDCreationManager.php');
 require(__DIR__.'/utilsFunction/ActionBdd.php');
 require('../model/BDD.php');
 require('../BDD/CreationClass/createBDDMng.php');
+require(__DIR__ .'/../vendor/autoload.php');
 $path = '../DotENV.php';
 use DevCoder\DotEnv;
 if(file_exists($path))
 {
     include($path);
-
-    echo ' exist '.$path;
     if(file_exists('../vars/.env'))
     {
         echo ' .ENV exist '.'../vars/.env';
@@ -21,7 +20,6 @@ else{
     echo 'not exist ';
 }
 
-require(__DIR__ .'/../vendor/autoload.php');
 
 
 

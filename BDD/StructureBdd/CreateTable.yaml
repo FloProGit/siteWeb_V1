@@ -25,7 +25,7 @@
 
 CreateTable:
   name: users
-  DBTarget: n47ic_bddflopro
+  DBTarget: '%env(DATABASE_TABLE)%'
   column:
     column1:
       name: ID
