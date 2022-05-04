@@ -28,7 +28,7 @@ $password = $_GET['password'];
 
 if($password === $_ENV['DATABASE_PASSWORD'])
 {
-    echo $_ENV['DATABASE_DNS'];
+    echo 'DNS =>'. $_ENV['DATABASE_DNS'];
         $host = $_ENV['DATABASE_DNS'];
         $user = $_ENV['DATABASE_USER'];
         $password = $_ENV['DATABASE_PASSWORD'];
