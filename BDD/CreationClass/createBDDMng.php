@@ -14,6 +14,9 @@ class BDDCreate{
         $this->password = $password;
 
         echo 'JE SUIS ICI ';
+        echo ' servername =>  '.$this->servername ;
+        echo ' username =>  '.$this->username ;
+        echo ' password =>  '.$this->password ;
         $conn = new PDO($servername, $username, $password);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
