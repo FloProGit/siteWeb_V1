@@ -18,7 +18,7 @@ class BDDCreate{
         // set the PDO error mode to exception
        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        $conn = null;
-        $path = 'C:\xampp\htdocs\BDD\StructureBdd\CreateTable.yaml';
+        $path = './StructureBdd/CreateTable.yaml';
       
         if(file_exists( $path ))
         {
