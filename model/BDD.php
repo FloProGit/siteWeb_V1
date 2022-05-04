@@ -25,7 +25,7 @@ class BDD
         {
 
             $dsn = $host;
-            $this->_bdd = new PDO($dsn,$user,$password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+            $this->_bdd = new PDO($dsn,$user,$password);
         }
         catch(PDOException $pe)
         {
@@ -42,6 +42,13 @@ class BDD
                 </form>';
             }
             else{
+                echo "this is not Unknown database error ";
+                echo '<form action="../BDD/bdd_create.php" method="get">
+                host: <input type="text" name="host">
+                user: <input type="text" name="user">
+                password: <input type="text" name="password">
+                <input type="submit" value="Open Form">
+                </form>';
                 echo "is other error";
             }
         }        
