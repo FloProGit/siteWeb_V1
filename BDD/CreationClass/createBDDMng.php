@@ -13,10 +13,11 @@ class BDDCreate{
         $this->username = $username;
         $this->password = $password;
 
-        $conn = new PDO("mysql:host=$servername", $username, $password);
+        echo 'JE SUIS ICI ';
+       // $conn = new PDO("mysql:host=$servername", $username, $password);
         // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+       // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       $conn = null;
         $path = 'C:\xampp\htdocs\BDD\StructureBdd\CreateTable.yaml';
       
         if(file_exists( $path ))

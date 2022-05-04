@@ -5,6 +5,8 @@ require(__DIR__.'/utilsFunction/ActionBdd.php');
 require('../model/BDD.php');
 require('../BDD/CreationClass/createBDDMng.php');
 
+require(__DIR__ .'/../vendor/autoload.php');
+
 $servername = $_GET['host'];
 $username = $_GET['user'];
 $password = $_GET['password'];

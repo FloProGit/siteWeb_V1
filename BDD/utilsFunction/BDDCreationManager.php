@@ -1,12 +1,18 @@
 <?php
 
+use Symfony\Component\Yaml\Yaml;
+
 class BDDCreationManager
 {
     private $arrayAction =[];
 
     public function __construct($yamlPath,$conn)
     {
-        $yamlArray = yaml_parse_file( $yamlPath );
+
+        $value = Yaml::parseFile($yamlPath);
+        var_dump($value);
+       //$yamlArray = yaml_parse_file( $yamlPath );
+       $yamlArray =[];
         foreach ($yamlArray as $key => $Action)  {
             
             array_push($this->arrayAction, $this->CreateObjectsAction($key,$Action));
