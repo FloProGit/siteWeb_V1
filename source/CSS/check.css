@@ -1,5 +1,9 @@
+body
+{
+    margin-left: 20%;
+}
 .Check 
 {
     color: white;
-    padding-left: 50%;
+    margin-left: 50%;
 }

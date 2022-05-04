@@ -20,6 +20,9 @@ class Router
         // -----use only for check some  variable -----
         'check'=>['controller' => 'home', 'method'=>'showCheck'],
         //------------------------------
+        // -----use only for check some  variable -----
+        'BDDcreatorpage'=>['controller' => 'home', 'method'=>'showCheck'],
+        //------------------------------
 
 
 
