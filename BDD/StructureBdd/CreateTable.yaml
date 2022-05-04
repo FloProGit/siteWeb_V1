@@ -1,6 +1,6 @@
 ---
-CreateBDD:
-  name : flotestbdd
+# CreateBDD:
+#   name : flotestbdd
 
 # column1:
 #       name: ID
@@ -25,7 +25,7 @@ CreateBDD:
 
 CreateTable:
   name: users
-  DBTarget: flotestbdd
+  DBTarget: n47ic_bddflopro
   column:
     column1:
       name: ID
