@@ -28,5 +28,11 @@ class Home
         $myView = new View('CheckVar');
         $myView->render();
     }
+    public function showCreateBDD()
+    {
+        //echo "tata";
+        $myView = new View('CreateBDDPage');
+        $myView->render();
+    }
   
 }

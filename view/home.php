@@ -1,9 +1,13 @@
-
+<?php
+    use app\classes\sessions\SessionMng;
+    SessionMng::init_php_session();
+?>
 <div class="Page_inner">
         <section id="section_home">
             <div class="header_intro">
-                <h1>SUDRE FLORIAN</h1>
-                <h2>recherche alternance fullstack</h2>
+                <h1>SUDRE FLORIAN </h1>
+
+                <h2>recherche alternance fullstack <?= SessionMng::GETSessionData('test') ?></h2>
                 <p>Bienvenue sur mon site Web Actuellement en construction.</p>
                 <p>Celui-ci étant mon premier site web, j’ai décidé de le faire sans Framework avec un model MVC </p>
                 <p>Ma décision de ne pas utiliser de Framework, ni composer est l’apprentissage des bases dans le développement web, les connaitre me permettra pour l’avenir une compréhension plus poussé dans les Framework et les Stack que j’utiliserais.</p>
@@ -28,6 +32,7 @@
                     <li>Mise en place de la page dynamique de projet.</li>
                     <li>Creation de la page d’administration et d’édition de projet </li>
                     <li>Connection avec ma BDD pour le stockage des information ,photo et video des projets.</li>
+                   
                 </ul>
             
             

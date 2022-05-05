@@ -1,3 +1,7 @@
+<?php
+    use app\classes\sessions\SessionMng;
+    SessionMng::init_php_session();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -18,6 +22,17 @@
             <a href=<?= HOST."competence"?>>competence</a>
             <a href="projets">projets</a>
             <a href="contact">contact</a>
+            <?php 
+            if(!empty($_SESSION['login']))
+            {
+                if($_SESSION['login']==='on')
+                {
+              ?>  <a href=<?php SessionMng::clean_php_session();?>>DECONNECT</a><?php
+                }
+            }
+            
+            ?>
+            
         </nav>
     </menu>
 

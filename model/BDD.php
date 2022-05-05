@@ -5,7 +5,7 @@ class BDD
 
     private static $_instance;
 
-    public static function getInstance()
+    public static function getInstance() :PDO
     {
         if(empty(self::$_instance))
         {
@@ -17,40 +17,20 @@ class BDD
     public function __construct()
     {
         $dbname = 'test';
-        echo $_ENV['DATABASE_DNS'];
         $host = $_ENV['DATABASE_DNS'];
+        $DBname ='dbname='.$_ENV['DATABASE_NAME'];
         $user = $_ENV['DATABASE_USER'];
         $password = $_ENV['DATABASE_PASSWORD'];
         try
         {
 
-            $dsn = $host;
+            $dsn = $host.$DBname;
             $this->_bdd = new PDO($dsn,$user,$password);
         }
         catch(PDOException $pe)
         {
             $errorMsg = $pe->getMessage();
             echo $errorMsg;
-            if(str_contains($errorMsg,'Unknown database'))
-            {
-                echo "this is Bad Connection";
-                echo '<form action="../BDD/bdd_create.php" method="get">
-                host: <input type="text" name="host">
-                user: <input type="text" name="user">
-                password: <input type="text" name="password">
-                <input type="submit" value="Open Form">
-                </form>';
-            }
-            else{
-                echo "this is not Unknown database error ";
-                echo '<form action="../BDD/bdd_create.php" method="get">
-                host: <input type="text" name="host">
-                user: <input type="text" name="user">
-                password: <input type="text" name="password">
-                <input type="submit" value="Open Form">
-                </form>';
-                echo "is other error";
-            }
         }        
     }
 

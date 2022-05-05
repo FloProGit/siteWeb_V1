@@ -7,7 +7,6 @@ class MyAutoload
     {
         spl_autoload_register(array(__CLASS__,'autoload'));
 
-        echo 'DEFINE ACTIVATED';
         $root =$_SERVER['DOCUMENT_ROOT'];
         $host =$_SERVER['HTTP_HOST'];
         define('HOST',$_SERVER['REQUEST_SCHEME'].'://' . $host.'/');
@@ -19,25 +18,42 @@ class MyAutoload
         define('CSS',HOST.'source/CSS/');
         
         define('CLASSES',ROOT.'classes/');
-       // echo '<pre>';print_r($_SERVER);
     }
     public static function autoload($class)
     {
+        $class =str_replace('app\\','',$class);
+
+        $class =str_replace('\\','/',$class);
+
         if(file_exists(MODEL.$class.'.php'))
         {
+            // echo 'MODEL AUTOLOAD => '.MODEL.$class.'.php';
             include_once(MODEL.$class.'.php');
         }
-        elseif(file_exists(CLASSES.$class.'.php'))
-        {
-            include_once(CLASSES.$class.'.php');
-        }
+        // elseif(file_exists(CLASSES.$class.'.php'))
+        // {
+        //     echo 'CLASSES AUTOLOAD => '.CLASSES.$class.'.php';
+
+        //     include_once(CLASSES.$class.'.php');
+        // }
         elseif(file_exists(CONTROLLER.$class.'.php'))
         {
+            // echo 'CONTROLLER AUTOLOAD => '.CONTROLLER.$class.'.php';
+
             include_once(CONTROLLER.$class.'.php');
           
         }
+        elseif(file_exists($class.'.php'))
+        {
+            // echo 'NONE AUTOLOAD => '.$class.'.php';
+
+            include_once($class.'.php');
+        }
         else
-        echo $class . "not exist/";
+        {
+            echo 'ERROR AUTOLOAD => '. $class . " (not exist)";
+
+        }
     }
 }
 ?>

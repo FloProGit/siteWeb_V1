@@ -1,4 +1,5 @@
 <?php
+use app\classes\authentication\auth ;
 
 
 class loginModel extends BaseManager
@@ -8,44 +9,18 @@ class loginModel extends BaseManager
     
     public function __construct($username,$password)
     {
-        echo'login construct';
         parent::__construct("user","User");
-
+        $this->_username = $username;
+        $this->_password = $password;
         
     }
 
-    public function validateUser()
+    public function validateUser():string|bool
     {
-        $this->_username = $_POST['username'];
-        $this->_password = $_POST['password'];
-
-        // if(isset($this->_bdd))
-        // {
-        //     $req = $this->_bdd->prepare("SELECT * FROM users WHERE username=?" );
-        //     //$req->setFetchMode(PDO::FETCH_ASSOC);
-        //     $req->execute(array($this->_username));
-        // }
-        // $result = $req->fetch(PDO::FETCH_LAZY);
-        // //$result = $req->fetch(PDO::FETCH_ASSOC);
-        // if( $req->rowCount() === 0)
-        // {
-        //         return 'NO USER FOUND';
-        // }
-        // else{
-        //     if($req->rowCount() === 1)
-        //     {
-        //         return $this->compare($result->password ,$this->_password);
-        //     }
-        // }
+        return auth::CallValidateUser($this->_bdd,$this->_username,$this->_password);
     }
 
-    private function compare($a ,$b)
-    {
-        if($a === $b)
-        return true;
-
-        return false;
-    }
+  
 
     public function getUserName()
     {
