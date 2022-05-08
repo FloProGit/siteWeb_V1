@@ -8,6 +8,9 @@
 
         </div>
         <div id="Competence_graph">
+        <hr style="left:65vw" ><h2 style="left:59vw; top:22vh"  class="complvl">basique</h2> </hr>
+        <hr style="left:75vw" ><h2 style="left:67vw; top:22vh"  class="complvl">intermediaire</h2> </hr>
+        <hr style="left:85vw" ><h2 style="left:78vw; top:22vh"  class="complvl">avancé</h2></hr>
             <div class="graph_line ">
                 <span>C</span>
                 <footer>
@@ -29,31 +32,31 @@
             <div class="graph_line ">
                 <span>html</span>
                 <footer>
-                    <div style="width: 30%; background-color: orange;animation-delay: 0.9s;"></div>
+                    <div style="width: 28%; background-color: orange;animation-delay: 0.9s;"></div>
                 </footer>
             </div>
             <div class="graph_line ">
                 <span>css</span>
                 <footer>
-                    <div style="width: 25%; background-color: blue;animation-delay: 1.2s;"></div>
+                    <div style="width: 28%; background-color: blue;animation-delay: 1.2s;"></div>
                 </footer>
             </div>
             <div class="graph_line ">
                 <span>javascript</span>
                 <footer>
-                    <div style="width: 50%; background-color: yellow;animation-delay: 1.5s;"></div>
+                    <div style="width: 35%; background-color: yellow;animation-delay: 1.5s;"></div>
                 </footer>
             </div>
             <div class="graph_line ">
                 <span>php</span>
                 <footer>
-                    <div style="width: 40%; background-color: darkslateblue;animation-delay: 1.8s;"></div>
+                    <div style="width: 38%; background-color: darkslateblue;animation-delay: 1.8s;"></div>
                 </footer>
             </div>
             <div class="graph_line ">
                 <span>mysql</span>
                 <footer>
-                    <div style="width: 50%; background-color: brown;animation-delay: 2.1s;"></div>
+                    <div style="width: 30%; background-color: brown;animation-delay: 2.1s;"></div>
                 </footer>
             </div>
         </div>

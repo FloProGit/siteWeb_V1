@@ -29,8 +29,11 @@
                 {
               ?>  <a href=<?php SessionMng::clean_php_session();?>>DECONNECT</a><?php
                 }
+              
             }
-            
+            else{
+                ?>  <a href="login">Login</a><?php
+            }
             ?>
             
         </nav>
