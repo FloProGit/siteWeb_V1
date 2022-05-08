@@ -27,7 +27,7 @@ class ActionBDD
         }
         if($keyAction === 'CreateTable')
         {
-            if($action['DBTarget'] ==='%env(DATABASE_NAME)%')
+            if($action['DBTarget'] ==='%env(DATABASE_TABLE)%')
             {
                 $action['DBTarget'] = $_ENV['DATABASE_NAME'];
             }
