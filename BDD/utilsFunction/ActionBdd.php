@@ -29,7 +29,7 @@ class ActionBDD
         {
             if($action['DBTarget'] ==='%env(DATABASE_TABLE)%')
             {
-                $action['DBTarget'] = $_ENV['DATABASE_NAME'];
+                $action['DBTarget'] = $_ENV['DATABASE_TABLE'];
             }
             $string = 'CREATE TABLE '.$action['DBTarget'].'.' . $action['name'] .'(';
             
